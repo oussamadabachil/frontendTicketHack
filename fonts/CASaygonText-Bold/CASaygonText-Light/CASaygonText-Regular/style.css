@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CA Saygon Text';
+    src: local('CA Saygon Text Regular'), local('CA-Saygon-Text-Regular'),
+        url('CASaygonText-Regular.woff2') format('woff2'),
+        url('CASaygonText-Regular.woff') format('woff'),
+        url('CASaygonText-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

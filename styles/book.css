@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:CAS;
+    src: url(../fonts/CASaygonText-Bold/CASaygonText-Bold.ttf);
+}
+@font-face {
+    font-family:CASRegular;
+    src: url(../fonts/CASaygonText-Bold/CASaygonText-Light/CASaygonText-Regular/CASaygonText-Regular.ttf);
+}
+
+@font-face {
+    font-family:CASLight;
+    src: url(../fonts/CASaygonText-Bold/CASaygonText-Light/CASaygonText-Light.ttf)
+}
+
+.list-group-item-panier-vide{
+    list-style: none;
+    font-size: 2rem;
+    font-family: CASLight;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+    background-color: none;
+
+}
+header{
+    height: 4.5rem;
+    background-color: white;
+    padding: 1rem;
+    align-items: center;
+    display: grid; 
+    grid-template-columns: repeat(10, 1fr); 
+    grid-template-rows: repeat(5, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+}
+
+body{
+  background-color: rgb(242, 243, 243);
+}
+
+header h1{
+    font-family: CASRegular;
+    color: rgb(114,169,146);
+    grid-area: 1 / 1 / 2 / 2; 
+}
+header h1 a{
+    text-decoration: none;
+    color: rgb(114,169,146);
+}
+
+header ul{
+    font-family: CASLight;
+    list-style: none;
+    display: grid; 
+    grid-template-columns: repeat(2,1fr);
+    grid-area: 1 / 9 / 2 / 11;
+    font-weight: 300;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: CASRegular;
+    font-size: 1rem;
+
+}
+main section {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25rem;
+}
+.cart-list>.list-group-item{
+    border-radius: .3rem;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family:  CASRegular;
+    display: grid;
+    padding: 1rem;
+    background-color: bisque;
+    margin: 0 auto 1rem;
+    width: 90%;
+    grid-template-columns: repeat(4,1fr);
+}
+.cart-list>.list-group-item>.delete:hover{
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background-color: white;
+    color:rgb(10, 28, 71)
+}
+.cart-list>.list-group-item>.delete{
+    padding: 1rem;
+    transition: all .3s ease-in-out;
+    border-radius: .3rem;
+    background-color: rgb(114,169,146);
+}
+.cart-list{
+    display: block;
+    margin: 3rem auto;
+    height: 11rem;
+    overflow-y: scroll;
+
+}
+
+main section div p {
+    color: white;
+
+    text-align: left;
+    font-family: CASLight;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.total{
+    font-family: CAS;
+}
+main>section>div>p>.purchase-btn{
+    font-family: CASRegular;
+    cursor: pointer;
+
+    position: absolute;
+    right: 2rem;
+    top: 0.6rem;
+    padding: .4rem;
+    border-radius: .3rem;
+    background-color: rgb(114,169,146);
+
+}
+main section h2 {
+    margin-top: 2rem;
+    color: black;
+
+    font-family: CASRegular;
+
+    text-align: center;
+    font-size: 2.3rem;
+} main section  p {
+    padding: .75rem;
+    font-size: 1rem;
+    color: black;
+
+    font-family: CASLight;
+    text-align: center;
+}
+main section hr{
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.dont-have-trips.show{
+    display: block;
+    font-family: CASRegular;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+}
+
+.dont-have-trips.hide{
+    display: none;
+
+
+}
