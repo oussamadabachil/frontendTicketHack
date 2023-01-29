@@ -1,65 +1,144 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TicketHack</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-</head>
-<body>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
     <header class="container">
-        <h1>Tickethack</h1>
-        <ul>
-            <li><a href="./cart.html">Cart</a></li>
-            <li><a href="./booked.html">Bookings</a></li>
-        </ul>
+      <h1>Tickethack</h1>
+      <ul>
+        <li><a href="./cart.html">Cart</a></li>
+        <li><a href="./booked.html">Bookings</a></li>
+      </ul>
     </header>
     <main>
-        <section class="container">
-            <h2>Explore the world effortless by train</h2>
-            <p>Compare book , enjoy cheap prices for train tickets : your journey starts on TicketHack</p>
-        </section>
+      <section class="container">
+        <h2>Explore the world effortless by train</h2>
+        <p>
+          Compare book , enjoy cheap prices for train tickets : your journey
+          starts on TicketHack
+        </p>
+      </section>
 
-        <div class="container-grid">
-            <div class="container-trips calendar">
+      <div class="container-grid">
+        <div class="container-trips calendar">
+          <div class="inputs input-text-departure-arrival">
+            <input
+              type="text"
+              name="departure"
+              id="departure"
+              value="Bruxelles"
+              placeholder="Departure"
+            />
+            <input
+              type="text"
+              name="arrival"
+              id="arrival"
+              value="Marseille"
+              placeholder="Arrival"
+            />
+          </div>
 
-                <div class="inputs input-text-departure-arrival">
-                    <input type="text" name="departure" id="departure" value="Bruxelles" placeholder="Departure">
-                    <input type="text" name="arrival" id="arrival" value="Marseille" placeholder="Arrival">
-                </div>
+          <div class="input-date">
+            <input type="date" value="2022-11-09" name="date" id="date" />
+          </div>
 
-                <div class="input-date">
-                    <input type="date" value="2022-11-09" name="date" id="date">
-                </div>
-
-                <button id="search-button">Search</button>
-            
-
-            </div>
-
-            <div class="container-trips train choice">
-                <ul class="list-group"></ul>
-                <figure id="figure">
-                    <img src="./images/train.png" alt="train">
-                    <hr>
-                    <figcaption>
-                        <p>It's time to book your future trip</p>
-                    </figcaption>
-                </figure>    
-            </div>
+          <button id="search-button">Search</button>
         </div>
-       
+
+        <div class="container-trips train choice">
+          <ul class="list-group"></ul>
+          <figure id="figure">
+            <img src="./images/train.png" alt="train" />
+            <hr />
+            <figcaption>
+              <p>It's time to book your future trip</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </main>
+    <div class="opacity-blurs"></div>
+    <div class="form-block-signin-signup" style="display: none;">
+      <div class="block-left">
+        <h3>Inscription</h3>
+        <div class="form-nom">
+          <label>Nom</label>
+          <input
+            type="text"
+            name="nom"
+            id="nom"
+            placeholder="Insérez votre nom"
+          />
+        </div>
+        <div class="form-prenom">
+          <label>Prénom</label>
+          <input
+            type="text"
+            name="nom"
+            id="prenom"
+            placeholder="Insérez votre prénom"
+          />
+        </div>
+        <div class="form-email">
+          <label>Adresse-email</label>
+          <input
+            type="mail"
+            name="mail"
+            id="prenom"
+            placeholder="Insérez votre adresse-mail"
+          />
+        </div>
+        <div class="form-passwrd">
+            <label>Mot de passe</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Insérez votre mot de passe"
+            />
+          </div>
+        <div class="form-button">
+          <button class="button">S'inscrire</button>
+        </div>
+      </div>
+      <div class="block-left connexion">
+        <h3>Connexion</h3>
+        <div class="form-nom">
+          <label>Adresse-email</label>
+          <input
+            type="text"
+            name="mail"
+            id="mail"
+            placeholder="Insérez votre adresse-mail"
+          />
+        </div>
+        <div class="form-prenom">
+          <label>Mot de passe</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Insérez votre mot de passe"
+          />
+        </div>
+        <div class="form-button">
+          <button class="button">Se connecter</button>
+        </div>
+      </div>
 
+    </div>
     <footer>
-        <script src="./js/script.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+      <script src="./js/script.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </footer>
-</body>
+  </body>
 </html>

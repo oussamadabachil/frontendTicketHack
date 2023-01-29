@@ -3,7 +3,7 @@ let buttonSearch = document.querySelector("#search-button");
 const ordersId = [];
 
 buttonSearch.addEventListener("click", () => {
-    alert("Si le site ne fonctionne pas, bah c'est bizarre parce que chez moi il fonctionne parfaitement.")
+    // alert("Si le site ne fonctionne pas, bah c'est bizarre parce que chez moi il fonctionne parfaitement.")
   let departure = document.querySelector("#departure").value;
   localStorage.setItem("departure", departure);
 
@@ -22,6 +22,8 @@ buttonSearch.addEventListener("click", () => {
         if (data.result) {
           document.querySelector(".list-group").style.display = "block";
           document.querySelector("#figure").style.display = "none";
+          document.querySelector(".list-group").innerHTML = ""
+
           for (let i = 0; i < data.data.length; i++) {
 
 
@@ -46,7 +48,6 @@ buttonSearch.addEventListener("click", () => {
 
             // console.log(dateOfTheTrip)
             // console.log(dateOfTheDay)
-
             document.querySelector(".list-group").innerHTML +=
               `
                     <li class="list-group-item animate__animated animate__fadeInLeft">${departure}>${arrival}   ${hourAndMinuteOnly}   ` +
@@ -62,7 +63,7 @@ buttonSearch.addEventListener("click", () => {
                 [i].addEventListener("click", () => {
                   document.querySelectorAll(".book")[i].style.backgroundColor =
                     "red";
-                  window.location.href = "./cart.html";
+                  // window.location.href = "./cart.html";
                   let id = document
                     .querySelectorAll(".book")
                     [i].getAttribute("data-id");
@@ -80,9 +81,9 @@ buttonSearch.addEventListener("click", () => {
                   })
                     .then((res) => res.json())
                     .then((data) => {
-                      //  if(data.result){
-                      //       alert("you have booked successfully")
-                      //  }
+                       if(data){
+                            alert("you have booked successfully")
+                       }
                     });
                 });
             }
